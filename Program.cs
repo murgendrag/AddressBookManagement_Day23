@@ -29,7 +29,16 @@ namespace AddressBookManagement_Day23
             NewContact.Email= Console.ReadLine();
 
         }
-        
+
+        private static void PrintPerson(AddPerson person)
+        {
+            Console.WriteLine("First Name: " + person.FirstName);
+            Console.WriteLine("Last Name: " + person.LastName);
+            Console.WriteLine("Phone Number: " + person.PhoneNumber);
+            Console.WriteLine("Address: " + person.Address);
+            Console.WriteLine("Email:" +person.Email);
+            Console.WriteLine("-------------------------------------------");
+        }
     }
     
 }
