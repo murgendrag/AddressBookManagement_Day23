@@ -2,43 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 
 namespace AddressBookManagement_Day23
 {
-    public class Person
+    public class program
     {
         public static void Main(string[] args)
         {
+
+            List<string> AddressBook = new List<string>();
+
             Console.WriteLine("Welcome to Address Book Program");
-            AddPerson NewContact = new AddPerson();
 
             Console.Write("Enter First Name: ");
-            NewContact.FirstName = Console.ReadLine();
+            AddressBook.Add(Console.ReadLine());
 
             Console.Write("Enter Last Name: ");
-            NewContact.LastName = Console.ReadLine();
+            AddressBook.Add(Console.ReadLine());
 
             Console.Write("Enter Address : ");
-            NewContact.Address = Console.ReadLine();
+            AddressBook.Add(Console.ReadLine());
 
             Console.Write("Enter Phone Number: ");
-            NewContact.PhoneNumber = Console.ReadLine();
+            AddressBook.Add(Console.ReadLine());
 
             Console.Write("Enter Email: ");
-            NewContact.Email= Console.ReadLine();
+            AddressBook.Add(Console.ReadLine());
 
+            Console.WriteLine("Iterating names of person");
+          
+            foreach(string s in AddressBook)
+            {
+                Console.Write(s);
+            }
+  
         }
-
-        private static void PrintPerson(AddPerson person)
-        {
-            Console.WriteLine("First Name: " + person.FirstName);
-            Console.WriteLine("Last Name: " + person.LastName);
-            Console.WriteLine("Phone Number: " + person.PhoneNumber);
-            Console.WriteLine("Address: " + person.Address);
-            Console.WriteLine("Email:" +person.Email);
-            Console.WriteLine("-------------------------------------------");
-        }
-    }
-    
+    } 
 }
