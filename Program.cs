@@ -67,6 +67,14 @@ namespace AddressBookManagement_Day23
                     Console.WriteLine(s);
                 }
 
+                Console.WriteLine("Enter the name you want to search");
+                string search = Console.ReadLine();
+                for (int i = 0; i < AddressBook.Count; i++)
+                {
+                    if (AddressBook[i].Contains(search))
+                        Console.WriteLine("Name found"+AddressBook[i]);
+                }
+                
             }
             else
             {
@@ -91,6 +99,13 @@ namespace AddressBookManagement_Day23
                 foreach (string m in AddressBook2)
                 {
                     Console.WriteLine(m);
+                }
+                Console.WriteLine("Enter the name you want to search");
+                string search2 = Console.ReadLine();
+                for (int i = 0; i < AddressBook2.Count; i++)
+                {
+                    if (AddressBook2.Contains(search2))
+                        Console.WriteLine("Name found" + AddressBook2);
                 }
             }
         }
