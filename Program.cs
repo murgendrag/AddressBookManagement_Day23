@@ -36,7 +36,20 @@ namespace AddressBookManagement_Day23
             {
                 Console.Write(s);
             }
-  
+
+            Console.WriteLine("\n enter the name you want to edit");
+            string EditName=Console.ReadLine();
+            Console.WriteLine("Enter the name to be replaced with");
+            string ReplaceName=Console.ReadLine();
+            for (int i = 0; i < AddressBook.Count; i++)
+            {
+                if (AddressBook[i].Contains(EditName)) ;
+                AddressBook[i] = ReplaceName;
+            }
+            foreach (string s in AddressBook)
+            {
+                Console.Write(s);
+            }
         }
     } 
 }
