@@ -108,6 +108,17 @@ namespace AddressBookManagement_Day23
                         Console.WriteLine("Name found" + AddressBook2);
                 }
             }
+                 void Sort<T>(IList<T> AddressBook)
+                {
+                    List<T> tmp = new List<T>(AddressBook);
+                    tmp.Sort();
+                    for (int i = 0; i < tmp.Count; i++)
+                    {
+                        AddressBook[i] = tmp[i];
+                    }
+                }
+
+            
         }
     } 
 }
